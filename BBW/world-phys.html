@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>billboards</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<style>
+			body {
+				margin: 0;
+				overflow: hidden;
+			}
+			canvas {
+				display: block;
+			}
+			#join-area {
+				position: absolute;
+				top: 0px;
+				left: 4px;
+				z-index: 1;
+			}
+			#button-area {
+				position: absolute;
+				top: 24px;
+				left: 0px;
+				z-index: 1;
+			}
+			#remote-media-area {
+				position: absolute;
+				top: 48px;
+				left: 0px;
+				z-index: 1;
+			}
+			#readme {
+				position: absolute;
+				top: 172px;
+				left: 0px;
+				z-index: 1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="join-area">
+			room name: <input id="channel-name" type="text" />
+			<button id="join">join</button>
+            ** press join **
+		</div>
+		<div id="button-area"></div>
+		<div id="remote-media-area"></div>
+        <div id="readme">
+        ** press 's' to start/stop dropping balls, press 'a'/'d' to move the cloth **
+        </div>
+		<!-- Import maps polyfill -->
+		<!-- Remove this when import maps will be widely supported -->
+		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.151.3/build/three.module.js",
+					"three/addons/": "https://unpkg.com/three@0.151.3/examples/jsm/"
+				}
+			}
+		</script>
+
+    <script src="https://rawcdn.githack.com/kripken/ammo.js/aab297a4164779c3a9d8dc8d9da26958de3cb778/builds/ammo.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@skyway-sdk/room/dist/skyway_room-latest.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@skyway-sdk/core/dist/skyway_core-latest.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.2/math.min.js"></script>
+		<script src='https://cdn.jsdelivr.net/npm/webxr-polyfill@latest/build/webxr-polyfill.js'></script>
+		<script type="module" src="world-phys.js"></script>
+	</body>
+</html>

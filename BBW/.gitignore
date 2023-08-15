@@ -1,0 +1,15 @@
+.ipynb_checkpoints
+
+.server
+
+build/
+
+insngp/instant-ngp-head
+
+output.webm
+# output*.png
+capture/
+
+sd/models
+
+!.gitkeep
